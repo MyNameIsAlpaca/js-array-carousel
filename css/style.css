@@ -29,14 +29,14 @@ body {
 
 #btn-up {
     position: absolute;
-    top: 60px;
-    left: 50%;
+    top: 100px;
+    right: 220px;
 }
 
 #btn-down {
     position: absolute;
-    bottom: 60px;
-    left: 50%;
+    bottom: 100px;
+    right: 220px;
 }
 
 .btn {
@@ -46,6 +46,7 @@ body {
     border: 0;
     border-radius: 25%;
     cursor: pointer;
+    z-index: 3;
 }
 
 .immagine {
