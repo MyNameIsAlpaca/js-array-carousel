@@ -44,7 +44,6 @@ buttonDownEl.addEventListener("click", function(){
 
     imageContainerEl.src = images[index]
 
-
 });
 
 

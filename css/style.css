@@ -53,3 +53,24 @@ body {
     width: 100%;
     height: 100%;
 }
+
+.thumbnailsContainer {
+    height: 120px;
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+.thumbnailsContainer .thumbnails {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid white;
+}
+
+.thumbnailsContainer .thumbnails img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
