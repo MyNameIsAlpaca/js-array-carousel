@@ -7,3 +7,48 @@
 body {
     font-family: sans-serif;
 }
+
+.container {
+    height: 100vh;
+    background-color: black;
+}
+
+.container .imgContainer {
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+    position: relative;
+}
+
+.container .imgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#btn-up {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+}
+
+#btn-down {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.527);
+    font-size: 18px;
+    padding: 5px;
+    border: 0;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.immagine {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
