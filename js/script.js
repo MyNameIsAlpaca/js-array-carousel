@@ -12,39 +12,82 @@ let imageContainerEl = document.getElementById("image");
 
 //creo un index
 
-let index = 0;
+let index = 4;
 
 //assegno l'index alla sorgente dell'immagine
 
 imageContainerEl.src = images[index]
 
+//creo versione javascript della thumbnailsContainer
+
+let thumbnailsContainer = document.getElementById("thumbnailsContainer");
+
+//genero img delle thumbnails
+
+for (let i = 0; i < images.length; i++) {
+    //creo elemento div
+    let newThumbnailsImg = document.createElement("img");
+
+    //aggiungo la classe
+
+    newThumbnailsImg.classList.add("thumbnails");
+
+    //aggiungo le immagini
+
+    newThumbnailsImg.src = images[i]
+
+    //lo metto figlio di thumbnailsContainer
+
+    thumbnailsContainer.append(newThumbnailsImg)
+}
+
+//creo un array di thumbnails
+
+let thumbnailsElements = document.querySelectorAll('.thumbnails');
+
+//aggiungo la classe active
+
+thumbnailsElements[index].classList.add("active")
+
 //genero il funzionamento del tasto su
 
-buttonUpEl.addEventListener("click", function(){
-
+buttonDownEl.addEventListener("click", function(){
+    
     index++;
     
     if(index == 5) {
         index = 0
+        thumbnailsElements[4].classList.remove("active");
+    } else {    
+        thumbnailsElements[index - 1].classList.remove("active");
     }
+
+    thumbnailsElements[index].classList.add("active")
     
     imageContainerEl.src = images[index]
+    
 
 });
 
 //genero il funzionamento del tasto giu
 
 
-buttonDownEl.addEventListener("click", function(){
+buttonUpEl.addEventListener("click", function(){
     index--;
 
     if(index == -1) {
         index = 4
+        thumbnailsElements[0].classList.remove("active");
+    } else {    
+        thumbnailsElements[index + 1].classList.remove("active");
     }
+
+    thumbnailsElements[index].classList.add("active")
 
     imageContainerEl.src = images[index]
 
 });
+
 
 
 
