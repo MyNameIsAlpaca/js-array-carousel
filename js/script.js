@@ -55,9 +55,9 @@ buttonDownEl.addEventListener("click", function(){
     
     index++;
     
-    if(index == 5) {
+    if(index == thumbnailsElements.length) {
         index = 0
-        thumbnailsElements[4].classList.remove("active");
+        thumbnailsElements[thumbnailsElements.length - 1].classList.remove("active");
     } else {    
         thumbnailsElements[index - 1].classList.remove("active");
     }
@@ -76,7 +76,7 @@ buttonUpEl.addEventListener("click", function(){
     index--;
 
     if(index == -1) {
-        index = 4
+        index = thumbnailsElements.length - 1;
         thumbnailsElements[0].classList.remove("active");
     } else {    
         thumbnailsElements[index + 1].classList.remove("active");
